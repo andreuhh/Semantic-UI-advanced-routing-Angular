@@ -1,0 +1,11 @@
+<div class="ui accordion styled" (ckick)="accExp(i)">
+    <ng-container *ngFor="let item of items; let i = index">
+        <div class="title" >
+            <i class="dropdown icon"></i>
+              {{item.title}}
+        </div>
+        <div [ngClass]="{active: i === openedItemIndex}" class="content">
+            <p>{{item.content}}</p>
+        </div>
+    </ng-container>
+</div>
